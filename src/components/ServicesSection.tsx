@@ -30,6 +30,13 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section id="services" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -49,6 +56,7 @@ const ServicesSection = () => {
               key={index} 
               to={service.link}
               className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 hover:border-blue-200 group"
+              onClick={scrollToTop}
             >
               <div className="mb-4 group-hover:text-blue-600 transition-colors">{service.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{service.title}</h3>

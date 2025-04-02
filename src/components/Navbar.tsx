@@ -24,6 +24,31 @@ const Navbar = () => {
     };
   }, []);
 
+  // Add smooth scroll effect for anchor links
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A') {
+        const href = target.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const element = document.querySelector(href);
+          if (element) {
+            window.scrollTo({
+              top: element.getBoundingClientRect().top + window.scrollY,
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -33,6 +58,13 @@ const Navbar = () => {
   }`;
 
   const isHomePage = location.pathname === "/";
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const navLinks = [
     { name: "Trang Chủ", href: isHomePage ? "#home" : "/" },
@@ -53,7 +85,7 @@ const Navbar = () => {
     <nav className={navbarClasses}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold text-blue-900">
+          <Link to="/" className="text-2xl font-bold text-blue-900" onClick={scrollToTop}>
             VietSolution
           </Link>
 
@@ -83,6 +115,7 @@ const Navbar = () => {
                       key={index}
                       to={service.href}
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                      onClick={scrollToTop}
                     >
                       {service.name}
                     </Link>
@@ -131,7 +164,10 @@ const Navbar = () => {
                   key={index}
                   to={service.href}
                   className="block text-gray-700 hover:text-blue-600 font-medium transition-colors py-2 pl-4"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   {service.name}
                 </Link>
