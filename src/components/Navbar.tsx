@@ -182,7 +182,7 @@ const Navbar = () => {
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
               to="/"
-              className="flex-shrink-0 text-2xl font-bold text-blue-900"
+              className="flex-shrink-0 text-2xl font-bold text-blue-900 outline-none"
               onClick={scrollToTop}
             >
               VietSolution

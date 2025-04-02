@@ -310,7 +310,8 @@ const ContactSection = () => {
                   ].map((social, i) => (
                     <motion.a
                       key={i}
-                      href="#"
+                      href="https://facebook.com/albert2704"
+                      target="_blank"
                       className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
                       variants={socialIconVariants}
                       whileHover="hover"

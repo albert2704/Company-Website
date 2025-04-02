@@ -20,7 +20,8 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com/albert2704"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg
@@ -32,7 +33,8 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://facebook.com/albert2704"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg
@@ -44,7 +46,8 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://facebook.com/albert2704"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg
@@ -56,7 +59,8 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://facebook.com/albert2704"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg
