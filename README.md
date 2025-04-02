@@ -1,73 +1,104 @@
-# Welcome to your Lovable project
+# Viet Solution - Company Website
 
-## Project info
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**URL**: https://lovable.dev/projects/9020c0df-6b6d-4145-be55-3f24529339ae
+This repository contains the source code for the Viet Solution company website, showcasing professional IT solutions for businesses.
 
-## How can I edit this code?
+**Live Project URL**: [https://company-website-eosin-five.vercel.app](https://company-website-eosin-five.vercel.app) (Managed via Vercel)
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- **Responsive Design**: Adapts to various screen sizes (desktop, tablet, mobile).
+- **Service Pages**: Detailed information about core offerings:
+  - [Web Development](src/pages/WebDevelopment.tsx)
+  - [Business Analysis](src/pages/BusinessAnalysis.tsx)
+  - [Digital Marketing](src/pages/DigitalMarketing.tsx)
+  - [Cyber Security](src/pages/CyberSecurity.tsx)
+- **Interactive Components**: Includes a hero carousel, team showcase, contact form, and map integration.
+- **Policy Pages**:
+  - [Privacy Policy](src/pages/PrivacyPolicy.tsx)
+  - [Terms of Service](src/pages/TermsOfService.tsx)
+  - [Cookie Policy](src/pages/CookiePolicy.tsx)
+- **Smooth Scrolling & Animations**: Enhanced user experience with smooth navigation and subtle animations using Framer Motion.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9020c0df-6b6d-4145-be55-3f24529339ae) and start prompting.
+## 📸 Screenshots
 
-Changes made via Lovable will be committed automatically to this repo.
+Here's a glimpse of the Viet Solution website:
 
-**Use your preferred IDE**
+**Hero Section:**
+![Hero Section](public/preview.png)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**About Us Section:**
+![About Us Section](public/preview2.png)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Services Section:**
+![Services Section](public/preview3.png)
 
-Follow these steps:
+**Team Section:**
+![Team Section](public/preview4.png)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+**Contact Form:**
+![Contact Form](public/preview5.png)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+**Contact Map & Info:**
+![Contact Map & Info](public/preview6.png)
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Technologies Used
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **Frontend Framework**: [React](https://reactjs.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Routing**: [React Router DOM](https://reactrouter.com/)
+- **Form Handling (Contact)**: [EmailJS](https://www.emailjs.com/)
+- **State Management (Toasts)**: Custom hook ([`use-toast.ts`](src/hooks/use-toast.ts))
 
-**Edit a file directly in GitHub**
+## 🛠️ Getting Started (Local Development)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To run this project locally, follow these steps:
 
-**Use GitHub Codespaces**
+1.  **Prerequisites**: Ensure you have [Node.js](https://nodejs.org/) (which includes npm) installed. Using [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) is recommended.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2.  **Clone the repository**:
+    ```sh
+    git clone https://github.com/albert2704/Company-Website.git
+    cd Company-Website
+    ```
+3.  **Install dependencies**:
 
-## What technologies are used for this project?
+    ```sh
+    npm install
+    ```
 
-This project is built with:
+    _(Or `npm i`)_
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+4.  **Run the development server**:
+    ```sh
+    npm run dev
+    ```
+    This will start the Vite development server, typically available at `http://localhost:5173`. The server features Hot Module Replacement (HMR) for instant updates.
 
-## How can I deploy this project?
+## 🔧 Available Scripts
 
-Simply open [Lovable](https://lovable.dev/projects/9020c0df-6b6d-4145-be55-3f24529339ae) and click on Share -> Publish.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run lint`: Lints the codebase using ESLint.
+- `npm run preview`: Serves the production build locally for preview.
 
-## Can I connect a custom domain to my Lovable project?
+## ✏️ How to Edit
 
-Yes it is!
+- **Local IDE (like VS Code)**: Clone the repo, make changes, commit, and push.
+- **GitHub**: Edit files directly on GitHub or use GitHub Codespaces.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📞 Contact
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Viet Solution**
+
+- **Email**: albert04.dev@gmail.com
+- **Address**: Quận Hà Đông, Hà Nội
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details (if one exists, otherwise consider adding one).
