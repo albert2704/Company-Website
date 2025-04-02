@@ -1,39 +1,56 @@
 
 import { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MapSection = () => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [mapboxToken, setMapboxToken] = useState('');
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    mapboxgl.accessToken = mapboxToken;
+    // Load Google Maps API script
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=&callback=initMap`;
+    script.async = true;
+    script.defer = true;
     
-    const map = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [105.8342, 21.0278], // Hanoi coordinates
-      zoom: 12
-    });
-
-    // Add navigation controls
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
-
-    // Add marker for Hanoi
-    new mapboxgl.Marker()
-      .setLngLat([105.8342, 21.0278])
-      .setPopup(new mapboxgl.Popup().setHTML('<h3>Văn phòng của chúng tôi</h3>'))
-      .addTo(map);
-
-    return () => {
-      map.remove();
+    // Define the callback function that Google Maps will call
+    window.initMap = () => {
+      setMapLoaded(true);
     };
-  }, [mapboxToken]);
+    
+    document.head.appendChild(script);
+    
+    return () => {
+      // Clean up
+      window.initMap = undefined;
+      document.head.removeChild(script);
+    };
+  }, []);
 
-  const mapContainer = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!mapLoaded || !mapRef.current) return;
+    
+    // Create the map
+    const map = new google.maps.Map(mapRef.current, {
+      center: { lat: 21.0278, lng: 105.8342 }, // Hanoi
+      zoom: 15,
+    });
+    
+    // Add marker for office location
+    const marker = new google.maps.Marker({
+      position: { lat: 21.0278, lng: 105.8342 },
+      map: map,
+      title: 'Văn phòng của chúng tôi'
+    });
+    
+    // Add info window
+    const infowindow = new google.maps.InfoWindow({
+      content: '<h3>Văn phòng của chúng tôi</h3>'
+    });
+    
+    marker.addListener('click', () => {
+      infowindow.open(map, marker);
+    });
+  }, [mapLoaded]);
 
   return (
     <section id="location" className="py-20">
@@ -49,25 +66,16 @@ const MapSection = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-          {!mapboxToken ? (
-            <div className="p-6 w-full">
-              <p className="mb-4">Để hiển thị bản đồ, hãy nhập Mapbox token của bạn:</p>
-              <input 
-                type="text"
-                placeholder="Nhập Mapbox token ở đây"
-                className="w-full p-2 border rounded mb-4"
-                onChange={(e) => setMapboxToken(e.target.value)}
-              />
-              <p className="text-sm text-gray-500">
-                Bạn có thể lấy Mapbox token miễn phí tại: <a href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600">mapbox.com</a>
-              </p>
-            </div>
-          ) : (
-            <div 
-              ref={mapContainer}
-              className="w-full h-[400px]"
-            ></div>
-          )}
+          <div 
+            ref={mapRef}
+            className="w-full h-[400px]"
+          >
+            {!mapLoaded && (
+              <div className="w-full h-full flex items-center justify-center bg-gray-100">
+                <p>Đang tải bản đồ...</p>
+              </div>
+            )}
+          </div>
           
           <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
