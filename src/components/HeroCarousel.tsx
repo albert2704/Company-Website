@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -7,21 +6,24 @@ const slides = [
     id: 1,
     title: "Giải Pháp Sáng Tạo Cho Doanh Nghiệp Hiện Đại",
     description: "Chuyển đổi ý tưởng thành trải nghiệm kỹ thuật số xuất sắc",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=600",
+    image:
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=600",
     cta: "Tìm Hiểu Thêm",
   },
   {
     id: 2,
     title: "Lập Kế Hoạch & Thực Thi Chiến Lược",
     description: "Chúng tôi giúp doanh nghiệp của bạn phát huy hết tiềm năng",
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&h=600",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&h=600",
     cta: "Dịch Vụ Của Chúng Tôi",
   },
   {
     id: 3,
     title: "Cam Kết Với Thành Công Của Bạn",
     description: "Tạo mối quan hệ đối tác lâu dài với khách hàng",
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&h=600",
+    image:
+      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&h=600",
     cta: "Liên Hệ Ngay",
   },
 ];
@@ -40,7 +42,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

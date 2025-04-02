@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,18 +10,20 @@ import WebDevelopment from "./pages/WebDevelopment";
 import BusinessAnalysis from "./pages/BusinessAnalysis";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import CyberSecurity from "./pages/CyberSecurity";
+// Import policy pages
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 
 const queryClient = new QueryClient();
 
-// Create a ScrollToTop component to handle scrolling on route changes
+// Updated ScrollToTop component to use instant scrolling instead of smooth
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    // Remove smooth scrolling for navigation between pages
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
@@ -41,6 +42,12 @@ const App = () => (
           <Route path="/business-analysis" element={<BusinessAnalysis />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
           <Route path="/cyber-security" element={<CyberSecurity />} />
+
+          {/* Policy Pages */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
