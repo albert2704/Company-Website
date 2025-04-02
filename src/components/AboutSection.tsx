@@ -9,19 +9,19 @@ const AboutSection = () => {
           <div className="md:w-1/2">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-              alt="About our company"
+              alt="Về công ty chúng tôi"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
           </div>
           
           <div className="md:w-1/2">
             <div className="mb-4">
-              <span className="text-blue-600 font-semibold">About Us</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-900">Our Story and Mission</h2>
+              <span className="text-blue-600 font-semibold">Về Chúng Tôi</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-900">Câu Chuyện và Sứ Mệnh</h2>
             </div>
             
             <p className="text-gray-700 mb-6">
-              Founded in 2010, our company has grown from a small startup to a leading provider of innovative solutions for businesses worldwide. We believe in creating long-lasting relationships with our clients based on trust, transparency, and delivering exceptional results.
+              Được thành lập vào năm 2010, VietSolution đã phát triển từ một công ty khởi nghiệp nhỏ trở thành nhà cung cấp hàng đầu các giải pháp đổi mới cho doanh nghiệp trên toàn Việt Nam và khu vực. Chúng tôi tin tưởng vào việc xây dựng mối quan hệ lâu dài với khách hàng dựa trên sự tin cậy, minh bạch và cung cấp kết quả vượt trội.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -32,8 +32,8 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Our Vision</h3>
-                  <p className="text-gray-700">To empower businesses with innovative solutions that drive growth and success.</p>
+                  <h3 className="font-semibold text-gray-900">Tầm Nhìn</h3>
+                  <p className="text-gray-700">Trao quyền cho doanh nghiệp với các giải pháp đổi mới thúc đẩy tăng trưởng và thành công.</p>
                 </div>
               </div>
               
@@ -44,8 +44,8 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Our Mission</h3>
-                  <p className="text-gray-700">To deliver exceptional services that exceed our clients' expectations and help them achieve their goals.</p>
+                  <h3 className="font-semibold text-gray-900">Sứ Mệnh</h3>
+                  <p className="text-gray-700">Cung cấp dịch vụ vượt trội vượt xa kỳ vọng của khách hàng và giúp họ đạt được mục tiêu kinh doanh.</p>
                 </div>
               </div>
               
@@ -56,14 +56,14 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Our Values</h3>
-                  <p className="text-gray-700">Integrity, excellence, innovation, and a customer-first approach guide everything we do.</p>
+                  <h3 className="font-semibold text-gray-900">Giá Trị</h3>
+                  <p className="text-gray-700">Chính trực, xuất sắc, đổi mới và tư duy khách hàng là trọng tâm hướng dẫn mọi hoạt động của chúng tôi.</p>
                 </div>
               </div>
             </div>
             
             <a href="#services" className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
-              Learn more about our services
+              Tìm hiểu thêm về dịch vụ của chúng tôi
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
           </div>

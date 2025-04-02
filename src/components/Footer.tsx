@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CôngTy</h3>
+            <h3 className="text-xl font-bold mb-4">VietSolution</h3>
             <p className="text-gray-400 mb-4">
               Cung cấp giải pháp sáng tạo cho các doanh nghiệp hiện đại từ năm 2010.
             </p>
@@ -87,7 +87,7 @@ const Footer = () => {
               <p className="mb-2">36 Phố Cát Linh</p>
               <p className="mb-4">Quận Đống Đa, Hà Nội</p>
               <p className="mb-2">Điện thoại: (024) 3736-8989</p>
-              <p>Email: info@congty.com</p>
+              <p>Email: info@vietsolution.vn</p>
             </address>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} CôngTy. Đã đăng ký Bản quyền.
+            &copy; {new Date().getFullYear()} VietSolution. Đã đăng ký Bản quyền.
           </p>
           
           <div className="mt-4 md:mt-0 flex space-x-6">

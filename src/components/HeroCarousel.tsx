@@ -5,24 +5,24 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    title: "Innovative Solutions for Modern Businesses",
-    description: "Transforming ideas into exceptional digital experiences",
+    title: "Giải Pháp Sáng Tạo Cho Doanh Nghiệp Hiện Đại",
+    description: "Chuyển đổi ý tưởng thành trải nghiệm kỹ thuật số xuất sắc",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=600",
-    cta: "Discover More",
+    cta: "Tìm Hiểu Thêm",
   },
   {
     id: 2,
-    title: "Strategic Planning & Execution",
-    description: "We help your business reach its full potential",
+    title: "Lập Kế Hoạch & Thực Thi Chiến Lược",
+    description: "Chúng tôi giúp doanh nghiệp của bạn phát huy hết tiềm năng",
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&h=600",
-    cta: "Our Services",
+    cta: "Dịch Vụ Của Chúng Tôi",
   },
   {
     id: 3,
-    title: "Dedicated to Your Success",
-    description: "Creating lasting partnerships with our clients",
+    title: "Cam Kết Với Thành Công Của Bạn",
+    description: "Tạo mối quan hệ đối tác lâu dài với khách hàng",
     image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&h=600",
-    cta: "Get in Touch",
+    cta: "Liên Hệ Ngay",
   },
 ];
 
