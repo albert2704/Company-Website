@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CompanyName</h3>
+            <h3 className="text-xl font-bold mb-4">CôngTy</h3>
             <p className="text-gray-400 mb-4">
-              Providing innovative solutions for modern businesses since 2010.
+              Cung cấp giải pháp sáng tạo cho các doanh nghiệp hiện đại từ năm 2010.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -43,51 +43,51 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4">Liên Kết Nhanh</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#home" className="text-gray-400 hover:text-white transition-colors">Trang Chủ</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a>
+                <a href="#about" className="text-gray-400 hover:text-white transition-colors">Giới Thiệu</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Dịch Vụ</a>
               </li>
               <li>
-                <a href="#team" className="text-gray-400 hover:text-white transition-colors">Our Team</a>
+                <a href="#team" className="text-gray-400 hover:text-white transition-colors">Đội Ngũ</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Liên Hệ</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Services</h3>
+            <h3 className="text-lg font-bold mb-4">Dịch Vụ</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Web Development</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Phát Triển Web</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Business Analytics</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Phân Tích Kinh Doanh</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Digital Marketing</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Marketing Số</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</a>
+                <a href="#services" className="text-gray-400 hover:text-white transition-colors">Bảo Mật Mạng</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-4">Liên Hệ Với Chúng Tôi</h3>
             <address className="not-italic text-gray-400">
-              <p className="mb-2">123 Business Street</p>
-              <p className="mb-4">Tech City, TC 12345</p>
-              <p className="mb-2">Phone: (555) 123-4567</p>
-              <p>Email: info@companyname.com</p>
+              <p className="mb-2">36 Phố Cát Linh</p>
+              <p className="mb-4">Quận Đống Đa, Hà Nội</p>
+              <p className="mb-2">Điện thoại: (024) 3736-8989</p>
+              <p>Email: info@congty.com</p>
             </address>
           </div>
         </div>
@@ -96,13 +96,13 @@ const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} CompanyName. All rights reserved.
+            &copy; {new Date().getFullYear()} CôngTy. Đã đăng ký Bản quyền.
           </p>
           
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Chính Sách Riêng Tư</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Điều Khoản Dịch Vụ</a>
+            <a href="#" className="text-gray-400 hover:text-white transition-colors">Chính Sách Cookie</a>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full fixed bottom-6 right-6 shadow-lg transition-colors"
-        aria-label="Scroll to top"
+        aria-label="Cuộn lên đầu trang"
       >
         <ArrowUp size={20} />
       </button>

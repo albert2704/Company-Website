@@ -32,11 +32,11 @@ const Navbar = () => {
   }`;
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Team", href: "#team" },
-    { name: "Contact", href: "#contact" },
+    { name: "Trang Chủ", href: "#home" },
+    { name: "Giới Thiệu", href: "#about" },
+    { name: "Dịch Vụ", href: "#services" },
+    { name: "Đội Ngũ", href: "#team" },
+    { name: "Liên Hệ", href: "#contact" },
   ];
 
   return (
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-blue-900">
-            CompanyName
+            CôngTy
           </Link>
 
           {/* Desktop Navigation */}
@@ -62,7 +62,7 @@ const Navbar = () => {
               href="#contact"
               className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
             >
-              Get Started
+              Bắt Đầu
             </a>
           </div>
 
@@ -95,7 +95,7 @@ const Navbar = () => {
               className="block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
-              Get Started
+              Bắt Đầu
             </a>
           </div>
         )}
